@@ -53,3 +53,59 @@ const findMax=(arr)=>{
     return max;
 }
 console.log(findMax([10, 25, 15, 22, 53]));
+
+// factorial for 6 number
+const factorialNum=(n)=>{
+    if (n === 0) return undefined;
+    let  result = 1;
+    for (let i =2 ; i<=n; i++){
+        result = result *i;
+    }
+    return result;
+}
+console.log(factorialNum(6));
+
+// Fibonacci series 
+// result might be 0,1,2,3,5,8,13,21 ...... 
+const FibonacciSeries=(n)=>{
+    if(n <0 ) return undefined;
+    let result= 0;
+
+}
+
+// prime number
+const isPrime=(num)=> {
+    // Numbers less than or equal to 1 are not prime
+    if (num <= 1) return false;
+    
+    // 2 is the only even prime number
+    if (num === 2) return true;
+    
+    // Exclude all other even numbers
+    if (num % 2 === 0) return false;
+    
+    // Check odd factors up to the square root of the number
+    const limit = Math.sqrt(num);
+    for (let i = 3; i <= limit; i += 2) {
+        if (num % i === 0) return false;
+    }
+    
+    return true;
+}
+
+console.log(isPrime(12));
+// console.log(isPrime(11));
+// console.log(isPrime(11));
+
+
+// prime number
+// function isPrime(num){
+//     if (num<=0) return false;
+//     if (num % num === 1 ){
+//         console.log("is prime number", (1))
+//     } 
+// }
+const reverseNumber=()=>{
+    let name= "NIKITA";
+    console.log(name)
+}

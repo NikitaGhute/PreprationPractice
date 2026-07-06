@@ -1,3 +1,6 @@
+// questions for ChatGpt:
+// hy need to convert num into string for output of reverse the number
+
 // swap two values without using 3rrd variable
 let a = 10;
 let b = 20;
@@ -97,7 +100,6 @@ console.log(isPrime(12));
 // console.log(isPrime(11));
 // console.log(isPrime(11));
 
-
 // prime number
 // function isPrime(num){
 //     if (num<=0) return false;
@@ -105,7 +107,34 @@ console.log(isPrime(12));
 //         console.log("is prime number", (1))
 //     } 
 // }
-const reverseNumber=()=>{
+
+// const reverseNumber=()=>{
     let name= "NIKITA";
+    let reverseOutput= name.split('').reverse().join('');
     console.log(name)
+    console.log("reverse output" ,reverseOutput)
+// }
+
+const numm= 123456
+let reverseNum = parseFloat(numm.toString().split('').reverse().join(''));  //why need to convert into string for reverse the number
+// console.log("numm", numm)
+console.log("reverse number", reverseNum)
+
+// unsolved - count digits
+// let countdigit= 123456;
+
+// reverse belo string
+let js= "javascript";
+let reverseJS= js.split('').reverse().join('');
+console.log("reverese js ", reverseJS);
+
+// palindrom 
+const palindromp=(str)=>{
+    let palindromName = str.split("").reverse().join('');
+    return str === palindromName;
 }
+
+    console.log("palindrom Name is", palindromp("madam"))
+    console.log("palindrome Name is ", palindromp("road"))
+
+// count vowel from given string

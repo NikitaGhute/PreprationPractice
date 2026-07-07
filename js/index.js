@@ -121,9 +121,10 @@ let reverseNum = parseFloat(numm.toString().split('').reverse().join(''));  //wh
 console.log("reverse number", reverseNum)
 
 // unsolved - count digits
-// let countdigit= 123456;
+// let countdigit= 123456; ..
 
-// reverse belo string
+
+// reverse below string
 let js= "javascript";
 let reverseJS= js.split('').reverse().join('');
 console.log("reverese js ", reverseJS);
@@ -138,3 +139,35 @@ const palindromp=(str)=>{
     console.log("palindrome Name is ", palindromp("road"))
 
 // count vowel from given string
+const countVowels = (strr)=>{
+    let count = 0;
+    let vowelss= "aeiouAEIOU";
+    for (const char of strr){           //here, char is temprory variable, for (.. of ..) loop through every charater of string one by one
+        if (vowelss.includes(char)){
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countVowels ("ChatGPT, openAI"))
+
+
+// count vowels
+// const vowelCount =(name1)=>{
+    //     let count1 =0;
+    //     let vowelss= "aeiouAEIOU";
+    //     for (const i of name1){
+        //         if(vowelss.includes(i)){
+            //             count1++;
+            //         }
+            //     }
+            //     return count1;
+            // }
+            
+            // console.log("vowel count are:", vowelCount("Japanies are technicals"))
+            
+            
+// remove duplicate characters
+    let duplicateName="Nikkittaa";
+    const uniqueValue=[...new Set(duplicateName)]
+  console.log(uniqueValue)

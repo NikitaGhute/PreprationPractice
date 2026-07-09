@@ -169,5 +169,35 @@ console.log(countVowels ("ChatGPT, openAI"))
             
 // remove duplicate characters
     let duplicateName="Nikkittaa";
-    const uniqueValue=[...new Set(duplicateName)]
-  console.log(uniqueValue)
+    const uniqueValue= new Set(duplicateName.split(""))       //here set use useful for create new set and works as === to check its value and its type also. splits into characters to get its value
+    console.log("unique value:" ,(uniqueValue.size))         
+
+  console.log("count of unique value is:", uniqueValue);
+
+// count character frequency    input-hello, output-h1, e1, l2, o1
+const helloName= "hello";
+    for (const char of helloName){
+        const countHello = char.split;
+        console.log("helloName", char)
+    }
+
+
+// remove duplicate value
+    let namme="programming";
+    const repeatValue= new Set(namme.split(""))
+    console.log("remove duplicate from programming:", repeatValue)
+
+// capitalize every word
+let capps="i am learning js"
+console.log(capps.toUpperCase())
+console.log(capps.toLowerCase())   
+
+// capitalize first letter of word from sentence
+const capitalSentence=(str)=>{
+   return str.split(" ")         //cuts string into array
+   .map(item=>item.charAt(0).toUpperCase() +item.slice(1))
+     //map loops to capitalize 1st letter of every word
+     //slice- extract remaining letters starts from index 1 to last
+   .join(" ");        //it again convert into string
+}
+console.log(capitalSentence("hello word from javascript"));

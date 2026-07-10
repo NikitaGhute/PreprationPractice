@@ -201,3 +201,68 @@ const capitalSentence=(str)=>{
    .join(" ");        //it again convert into string
 }
 console.log(capitalSentence("hello word from javascript"));
+
+// find longest word from sentence
+let longgWord= "javascript is client side and server side programming language."
+
+// check anagram eg- listen = silent
+
+const isAnagram=(str1, str2)=>{
+    const cleanStr1= str1.toLowerCase().replace(/[^a-z0-9]/g, " ");
+    const cleanStr2= str2.toLowerCase().replace(/[^a-z0-9]/g, " ");
+
+    if(cleanStr1.length !==cleanStr2.length) return false;
+
+    const sorted1 = cleanStr1.split('').sort().join('');
+    const sorted2 = cleanStr2.split('').sort().join('');
+
+    return sorted1 ===sorted2;
+}
+
+console.log(isAnagram("listen", "silent"))
+console.log(isAnagram("321432", "132423"))
+
+
+/* is anagram- logic
+1. write function with two paramter to comapre anagram,
+2. for correct comparision, replace uppercase into lowercase and number also from input
+3. check length of both input, if length is correct then split, sort and then join back character
+4. then continue to compare the character of both input, if both have same characters then return true
+*/
+
+const funAnagram=(strr1, strr2)=>{
+    const compStrr1= strr1.toLowerCase().replace(/[^a-z0-9]/g, " ");
+    const compStrr2=strr2.toLowerCase().replace(/[^a-z0-9]/g, " ");
+
+    if (compStrr1.length !== compStrr2.length) return false;
+
+    const sortedComp1= compStrr1.split(' ').sort().join('');
+    const sortedComp2= compStrr2.split(' ').sort().join('');
+
+    return sortedComp1 === sortedComp2;
+}
+
+console.log(funAnagram("kiran", "kiran"), "kiran");
+console.log(funAnagram("gramm", "gramm"), "gramm")
+// console.log(funAnagram("rat", "tar"), "result1")
+
+// most frequent character 
+    const frequentChar=(str)=>{
+        const charMap ={};
+        let maxChar = '';
+        let maxCount = 0;
+
+    for (const char of str){
+        charMap[char] = (charMap[char] || 0) + 1;
+        
+        if(charMap[char] > maxCount){
+            maxCount = charMap [char];
+            maxChar = char;
+        }
+     }
+        return {char : maxChar, count:maxCount};
+    }
+    console.log(frequentChar("programm"));
+
+
+    

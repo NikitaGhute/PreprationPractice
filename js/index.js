@@ -265,4 +265,13 @@ console.log(funAnagram("gramm", "gramm"), "gramm")
     console.log(frequentChar("programm"));
 
 
+// compress string - count each character length
+/*logic 
     
+*/  
+    // const compressChar=(str)=>{
+    //      for (const char of str){
+    //         const charLength =    
+    //      } 
+    //      return 
+    // }

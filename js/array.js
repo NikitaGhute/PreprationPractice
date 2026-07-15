@@ -68,13 +68,71 @@ console.log("fill in arr", numbers.fill(1,3))
 //  IMMUTABLE ARRAY YMETHODS IN JS - returning new array instead of modifying original array also called copying methods
 
   // replacement of mutable sort() is toSort() immutable
-    const sortTo = [3, 4, 5, 6, 1, 2, 8]
+    const sortTo = [0, 3, 4, 5, 6, 2, 8, 9, 1]
     console.log("replacement for sort",sortTo.toSorted())
  
   // replacement for reverse is toReversed() in immutable
     console.log("reverseTo for toReversed()", sortTo.toReversed())
 
-    
+  //replace for splice is toSpliced() in immutable
+    console.log("sortArr toSpliced", sortArr.toSpliced(2, 3));
 
+  //with() method is for replace array item
+  console.log("replace with index", sortArr.with(2, "market"))
 
+  // find maximum element
+    console.log("maximum element", Math.max(...sortTo))
 
+  // find minimum element
+    console.log("minimum element", Math.min(...sortTo))
+  //  o/p will be NaN if have alphabets
+
+  // find second last number
+  const getSecondLarge=(arr)=>{
+    let largeNumm = - Infinity;
+      let secondLargeNum = - Infinity;
+
+        for (const num of arr){
+          if(num > largeNumm){
+            secondLargeNum = largeNumm;
+            largeNumm = num;
+          }
+          else if (num > secondLargeNum && num !== secondLargeNum){
+            secondLargeNum = num;
+          }
+        }
+        return secondLargeNum === secondLargeNum - Infinity ? null : secondLargeNum;
+    }
+    const numberss =[10, 35, 51, 72, 91, 37, 64, 22];
+    console.log(getSecondLarge(numberss))
+
+    // remove duplicate number
+    const dupNumber = [1, 2, 3, 4, 1, 6, 7, 2, 9]
+    console.log("duplicate number", dupNumber)
+      console.log("removed duplicate number", [...new Set(dupNumber)])
+
+    // move all 0's at end of array
+      const moveZero=(arr)=>{
+        let pos = 0;
+          for(let i=0; i< arr.length; i++){
+            if (arr[i] !==0) {
+              arr[pos] =arr[i];
+              pos++;
+            }
+         }
+         while (pos < arr.length){
+          arr[pos] = 0;
+          pos++;
+         }
+         return arr;
+       }
+       const nums =[1, 3, 0, 6, 0, 2, 7, 0]
+       console.log("0 moved at the end", moveZero(nums))
+
+      // const moveZero=()=>{
+      //   for (let i=0; i< arr.length; i++){
+      //     if (arr[i] !==0){
+
+      //     }
+      //   }
+      // }

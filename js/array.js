@@ -112,27 +112,49 @@ console.log("fill in arr", numbers.fill(1,3))
       console.log("removed duplicate number", [...new Set(dupNumber)])
 
     // move all 0's at end of array
-      const moveZero=(arr)=>{
-        let pos = 0;
-          for(let i=0; i< arr.length; i++){
-            if (arr[i] !==0) {
-              arr[pos] =arr[i];
-              pos++;
-            }
-         }
-         while (pos < arr.length){
-          arr[pos] = 0;
-          pos++;
-         }
-         return arr;
-       }
-       const nums =[1, 3, 0, 6, 0, 2, 7, 0]
-       console.log("0 moved at the end", moveZero(nums))
+      // const moveZero=(arr)=>{
+      //   let pos = 0;
+      //     for(let i=0; i< arr.length; i++){
+      //       if (arr[i] !==0) {
+      //         arr[pos] =arr[i];
+      //         pos++;
+      //       }
+      //    }
+      //    while (pos < arr.length){
+      //     arr[pos] = 0;
+      //     pos++;
+      //    }
+      //    return arr;
+      //  }
+      //  const nums =[1, 3, 0, 6, 0, 2, 7, 0]
+      //  console.log("0 moved at the end", moveZero(nums))
 
-      // const moveZero=()=>{
-      //   for (let i=0; i< arr.length; i++){
-      //     if (arr[i] !==0){
+      // shift array towards right 
 
-      //     }
-      //   }
-      // }
+      // shift array towards left
+
+    // flatten array
+     const flattenArr=[1, [2, [3],[4], 4], 5, 6]
+     console.log("flatten array", flattenArr.flat(Infinity))
+    //  infinity for to completely flatten an array of any depth
+
+    // chunks array (opposite to the flatten array)
+    
+
+    // intersection array
+    const setA = new Set([1, 2, 3, 4, 7])
+    const setB = new Set([2, 3, 4, 6, 7])
+    const intersection = setA.intersection(setB)
+
+    console.log("interction of array", [...intersection])
+
+    // union() method in array
+    const A = new Set (['a', 'b', 'c', 'd', 'e'])
+    const B = new Set (['b', 'd', 'e', 'g'])
+        const C = A.union(B);
+    let text = "";
+    for (const x of C){
+      text += x;
+     }
+
+    console.log("union in array", text)

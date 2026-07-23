@@ -44,18 +44,14 @@ const debounceSearch= debounce(search, 2000);
 
 // currying method- reduce or avoid taking repeatative value or argument
 // 1. create main function 
-    const applyDiscount = (discount) =(price)=> price -discount;
-    // 2. lock 10% fixed discount for every item
-
-    const calcDiscount = (discount) =>{
-        return (price) =>{
-            
-            return price - (price * discount);
-            }
+    const applyDiscount = (discount) =>(price)=>{
+        return price - (price * discount);
     }
 
-    const fixedDisc = calcDiscount (10)
+// 2. lock 10% fixed discount for every item
+    const fixedDiscount = applyDiscount(0.10);
+
 // 3. just add the items price for getting final discount
-    console.log(fixedDisc(30) )
-    // console.log(calcDiscount(70))
-    // console.log(calcDiscount(58))
+    console.log(fixedDiscount(30))
+    console.log(fixedDiscount(70))
+    console.log(fixedDiscount(58))

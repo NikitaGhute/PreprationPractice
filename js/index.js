@@ -275,3 +275,64 @@ console.log(funAnagram("gramm", "gramm"), "gramm")
     //      } 
     //      return 
     // }
+
+    
+    let msg="outer message"
+     const showMsg=()=>{
+        // let msg= "new message is here"
+        let msg="new msg for const"
+        console.log("show message ==>", "message "  + msg)
+     }
+     showMsg()
+     console.log("outer scope", msg)
+     console.log("let scope:", msg)
+
+    // /function 
+     let name4="Nikita"
+     const helloFun=()=>{
+        let msg= "hello "  + name4;
+        console.log(msg, "message here")
+     }
+     helloFun()
+
+    //  check working of let about its scope
+     const user="Nikita"
+     const userFun=()=>{
+        const user = "Kiran"
+        // user ="kiran"
+      console.log("Hello " + user)
+     }
+     userFun()
+
+    // for empty parameter
+     const showMssg=(texxt)=>{
+        if(texxt === undefined){
+            texxt="empty message";
+        }
+        console.log("showMssg for argument", texxt);
+     }
+     showMssg();
+
+    //  empty parameter using or operator
+    const showwMsg=(ttext)=>{
+        if (ttext = ttext || 'empty');
+        console.log("OR operator", ttext)
+    }
+    showwMsg()
+
+// about return value
+  const checkAge=(age)=>{
+          if (age >= 18){
+            return true;
+          }
+          else{
+            return console.log("do you have driving license?")
+          }
+    }
+    let age = prompt("enter your age:", 20)
+     if( checkAge(age)){
+        console.log("access granted");
+    }
+    else{
+        console.log("access denied")
+    }

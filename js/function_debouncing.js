@@ -55,3 +55,5 @@ const debounceSearch= debounce(search, 2000);
     console.log(fixedDiscount(30))
     console.log(fixedDiscount(70))
     console.log(fixedDiscount(58))
+
+  

@@ -329,10 +329,18 @@ console.log(funAnagram("gramm", "gramm"), "gramm")
             return console.log("do you have driving license?")
           }
     }
-    let age = prompt("enter your age:", 20)
+    let age = console.log("enter your age:", 20)
      if( checkAge(age)){
         console.log("access granted");
     }
     else{
         console.log("access denied")
     }
+
+// copy function
+const helloo=()=>{
+    console.log("hello here");
+}
+    let newHello = helloo;
+ helloo("previous hello");
+ newHello("new hello");
